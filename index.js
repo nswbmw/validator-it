@@ -24,7 +24,7 @@ var validatorIt = module.exports = function (schema) {
       var result = pathScheme(realValue);
       // custom validate function
       if ('object' !== typeof result) {
-        result = { key: pathScheme.name, value: result };
+        result = { key: pathScheme.name || '[Function]', value: result };
       }
       if (result.value === false) {
         if (ifThrow) {

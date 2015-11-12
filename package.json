@@ -1,7 +1,7 @@
 {
   "name": "validator-it",
   "description": "Just validate it, based on [validator](https://github.com/chriso/validator.js).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "test": "node test"  
   },
