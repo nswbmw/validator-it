@@ -21,7 +21,7 @@ var validatorIt = module.exports = function (schema) {
         throw new Error('validator must be function.');
       }
       var realValue = objectPath.get(obj, path);
-      var result = pathScheme(realValue);
+      var result = pathScheme.call(this, realValue);
       // custom validate function
       if ('object' !== typeof result) {
         result = { key: pathScheme.name || '[Function]', value: result };
