@@ -1,6 +1,6 @@
 'use strict';
 
-var objectPath = require('object-path');
+var objectPath = require('object-path').withInheritedProps;
 var flatten = require('flat').flatten;
 var validator = require('validator');
 var assert = require('assert');
