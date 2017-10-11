@@ -1,6 +1,6 @@
 'use strict';
 
-var objectPath = require("object-path");
+var objectPath = require('object-path');
 var flatten = require('flat').flatten;
 var validator = require('validator');
 var assert = require('assert');
@@ -44,7 +44,7 @@ Object.keys(validator).forEach(function (method) {
     return function (str) {
       return {
         key: restArgs.length ? method + '(' + restArgs.join(', ') + ')' : method,
-        value: validator[method].apply(validator, [str].concat(restArgs))
+        value: validator[method].apply(validator, [str || ''].concat(restArgs))
       };
     };
   };
